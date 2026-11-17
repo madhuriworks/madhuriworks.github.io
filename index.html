@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Payyavula Madhuri | ECE Student, Embedded Systems and ML</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F3F5F8;--surface:#FFFFFF;--ink:#14213D;--muted:#4B5873;--line:#D5DBE6;--accent:#2B4EFF;--accent2:#0E8F7E;
+  --head:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;--body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
+  color-scheme:light;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0F1626;--surface:#172138;--ink:#E6EBF5;--muted:#A3AFC8;--line:#2A3754;--accent:#8FA3FF;--accent2:#4FD1BC;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#0F1626;--surface:#172138;--ink:#E6EBF5;--muted:#A3AFC8;--line:#2A3754;--accent:#8FA3FF;--accent2:#4FD1BC;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--body);
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:48px 48px;background-position:-1px -1px}
+body::after{content:"";position:fixed;inset:0;background:var(--bg);opacity:.86;z-index:-1}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:860px;margin:0 auto;padding:0 1.5rem}
+nav{display:flex;gap:1.25rem;flex-wrap:wrap;padding:1.25rem 0;font-weight:500}
+nav a{color:var(--muted);text-decoration:none}
+nav a:hover{color:var(--ink)}
+header.hero{padding:3.5rem 0 2.5rem}
+h1{font:800 clamp(2.6rem,9vw,5.2rem)/.98 var(--head);letter-spacing:-.03em;margin:0 0 1.25rem}
+.lede{font-size:1.25rem;max-width:34em;color:var(--muted);margin:0 0 1.5rem}
+.lede strong{color:var(--ink);font-weight:500}
+.btns{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.65rem 1.1rem;border-radius:6px;border:1.5px solid var(--ink);color:var(--ink);text-decoration:none;font-weight:500}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+:root[data-theme="dark"] .btn.primary{color:#0F1626}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn.primary{color:#0F1626}}
+.wave{width:100%;height:auto;margin:2.25rem 0 0;display:block}
+.wave path{fill:none;stroke:var(--accent);stroke-width:2.5;stroke-linejoin:miter;stroke-dasharray:2400;stroke-dashoffset:2400;animation:draw 2.6s ease-out .2s forwards}
+.wave path.b{stroke:var(--accent2);animation-delay:.6s}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.wave path{animation:none;stroke-dashoffset:0}html{scroll-behavior:auto}}
+section{padding:2.75rem 0;border-top:1px solid var(--line)}
+h2{font:700 1.9rem/1.15 var(--head);letter-spacing:-.015em;margin:0 0 1.5rem}
+h3{font:700 1.2rem/1.3 var(--head);margin:0}
+.item{display:grid;grid-template-columns:9.5rem 1fr;gap:.5rem 1.5rem;padding:1.1rem 0;border-bottom:1px dashed var(--line)}
+.item:last-child{border-bottom:0}
+.when{color:var(--muted);font-size:.95rem;padding-top:.15rem}
+.item ul{margin:.6rem 0 0;padding-left:1.15rem}
+.item li{margin:.3rem 0}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.7rem;padding:0;list-style:none}
+.tags li{margin:0;font-size:.85rem;padding:.15rem .6rem;border:1px solid var(--line);border-radius:99px;background:var(--surface);color:var(--muted)}
+.skills{display:grid;grid-template-columns:9.5rem 1fr;gap:.9rem 1.5rem}
+.skills dt{font-weight:500;color:var(--muted)}
+.skills dd{margin:0}
+.wins{list-style:none;margin:0;padding:0}
+.wins li{padding:.55rem 0 .55rem 1.6rem;position:relative}
+.wins li::before{content:"";position:absolute;left:0;top:1.05rem;width:.9rem;height:2px;background:var(--accent2)}
+.wins .top{font-weight:500}
+.edu{display:grid;gap:.4rem}
+.edu div{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:.5rem 0;border-bottom:1px dashed var(--line)}
+.edu b{font-weight:500}
+footer{padding:2.5rem 0 3.5rem;border-top:1px solid var(--line);color:var(--muted)}
+.contact{font:700 clamp(1.4rem,4.5vw,2.2rem)/1.2 var(--head);word-break:break-word}
+button.theme{background:none;border:1px solid var(--line);color:var(--muted);border-radius:6px;padding:.3rem .7rem;font:inherit;font-size:.9rem;cursor:pointer;margin-left:auto}
+@media (max-width:620px){.item,.skills{grid-template-columns:1fr}.item{gap:.25rem}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav aria-label="Sections">
+    <a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#achievements">Achievements</a><a href="#education">Education</a><a href="#contact">Contact</a>
+    <button class="theme" id="theme" type="button" aria-label="Switch colour theme">Theme</button>
+  </nav>
+
+  <header class="hero">
+    <h1>Payyavula Madhuri</h1>
+    <p class="lede">Final-year <strong>Electronics and Communication Engineering</strong> student at Mohan Babu University. I build embedded, IoT and machine learning systems, and I&rsquo;m interested in VLSI and Embedded Systems roles.</p>
+    <div class="btns">
+      <a class="btn primary" href="mailto:payyavulamadhuri5@gmail.com">Email me</a>
+      <a class="btn" href="https://github.com/madhuriworks" rel="noopener">GitHub</a>
+      <a class="btn" href="#projects">See my projects</a>
+    </div>
+    <svg class="wave" viewBox="0 0 800 90" role="img" aria-label="Decorative digital clock and data signal">
+      <path d="M0 70H40V20H100V70H160V20H200V70H280V20H320V70H360V20H440V70H520V20H560V70H640V20H700V70H800"/>
+      <path class="b" d="M0 82H70V40H130V82H230V40H290V82H380V40H410V82H500V40H600V82H670V40H730V82H800"/>
+    </svg>
+  </header>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="item">
+      <div class="when">May 2026 to Jul 2026</div>
+      <div>
+        <h3>NIT Intern, improving LLM performance with fine-tuning</h3>
+        <ul>
+          <li>Developed and fine-tuned transformer-based large language models using Python and Hugging Face Transformers.</li>
+          <li>Built NLP workflows covering preprocessing, tokenization, training, evaluation and feature extraction.</li>
+          <li>Analysed hidden states, CLS embeddings, confusion matrices and t-SNE plots to improve results, and measured models with accuracy, precision, recall and F1-score.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="item">
+      <div class="when">Nov 2024 to present</div>
+      <div>
+        <h3>Student Coordinator, IETE Student Forum (ISF)</h3>
+        <ul><li>Lead technical event planning, student coordination and communication with faculty and stakeholders.</li></ul>
+      </div>
+    </div>
+    <div class="item">
+      <div class="when">Sep 2025</div>
+      <div>
+        <h3>NIELIT training, CAD designs to 3D printing</h3>
+        <ul><li>Certified training from NIELIT (Govt. of India) with hands-on CAD and 3D printing practice.</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="item">
+      <h3 style="grid-column:1/-1">Gesture-Based Morse Code Communication System</h3>
+      <div class="when">Machine learning</div>
+      <div>
+        <p style="margin:0">A gesture recognition system that turns hand gestures into Morse code signals. It recognises gestures with over 90% accuracy and sends messages in under one second.</p>
+        <ul class="tags"><li>Machine learning</li><li>Gesture recognition</li><li>Communication</li></ul>
+      </div>
+    </div>
+    <div class="item">
+      <h3 style="grid-column:1/-1">LPG Gas Leakage Detection and Automatic Cut-Off System</h3>
+      <div class="when">Embedded C</div>
+      <div>
+        <p style="margin:0">Real-time gas monitoring with MQ-series sensors and a microcontroller. Buzzer and LED alerts (with optional GSM or Bluetooth) catch threshold breaches early to reduce fire risk at home and in industry.</p>
+        <ul class="tags"><li>Embedded C</li><li>MQ sensors</li><li>Microcontroller</li><li>GSM / Bluetooth</li></ul>
+      </div>
+    </div>
+    <div class="item">
+      <h3 style="grid-column:1/-1">AI-Based Crop Recommendation for Farmers</h3>
+      <div class="when">Team Hell Fire Club</div>
+      <div>
+        <p style="margin:0">A Random Forest model that recommends the best crop from soil nitrogen, phosphorus and potassium plus pH, temperature and rainfall. Built for non-technical users, to improve yield and resource use.</p>
+        <ul class="tags"><li>Random Forest</li><li>Python</li><li>Data-driven</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <dl class="skills">
+      <dt>Languages</dt><dd>C, Python</dd>
+      <dt>Tools</dt><dd>MATLAB, COMSOL Multiphysics, Google Colab, Kaggle Notebook, DSCH2, Arduino IDE, TinkerCAD, GitHub</dd>
+      <dt>Core concepts</dt><dd>Microcontrollers, IoT, VLSI, Embedded Systems, ML, Communications, Signal Processing</dd>
+    </dl>
+  </section>
+
+  <section id="achievements">
+    <h2>Achievements and certifications</h2>
+    <ul class="wins">
+      <li class="top">3rd place, Pragyan &rsquo;26 Hackathon</li>
+      <li class="top">Top 20 of 300+ teams, Tech24 Hackathon (GDG)</li>
+      <li>Certified in CAD Design to 3D Printing, NIELIT</li>
+      <li>Certified in Generative AI, Coursera</li>
+      <li>M2M &amp; IoT Interface Design and Protocols for Embedded Systems, Coursera</li>
+      <li>Learning FPGA Development, LinkedIn Learning</li>
+      <li>Certified in Embedded System, Embrizon Technologies</li>
+      <li>Certified in Typewriting (lower and higher level), SBTET</li>
+    </ul>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="edu">
+      <div><span><b>B.Tech, Electronics and Communication Engineering</b><br>Mohan Babu University, 2023 to present</span><span>GPA 8.80 / 10.0</span></div>
+      <div><span><b>Class 12</b>, Narayana Junior College (BIEAP), 2023</span><span>937 / 1000</span></div>
+      <div><span><b>Class 10</b>, Spring Dale Public School (SSC), 2020</span><span>600 / 600</span></div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p style="margin:0 0 .5rem">Open to opportunities in VLSI, embedded systems and applied ML.</p>
+    <p class="contact" style="margin:0"><a href="mailto:payyavulamadhuri5@gmail.com">payyavulamadhuri5@gmail.com</a></p>
+  </footer>
+</div>
+<script>
+(function(){
+  var root=document.documentElement,btn=document.getElementById('theme');
+  btn.addEventListener('click',function(){
+    var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);
+    root.setAttribute('data-theme',dark?'light':'dark');
+  });
+})();
+</script>
+</body>
+</html>
